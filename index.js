@@ -43,9 +43,6 @@ function mostrarTarefas() {
   //essa função adiciona itens dentro do html
 
   listaCompleta.innerHTML = novaLi;
-
-  localStorage.setItem("lista", JSON.stringify(minhaListaDeItens));
-  //"JSON.stringify" transforma os itens em strings
 }
 
 function concluirTarefa(posicao) {
@@ -61,13 +58,5 @@ function deletarItem(posicao) {
   mostrarTarefas();
 }
 
-function recarregarTarefas() {
-  const tarefasDoLocalStorage = localStorage.getItem("lista");
-  minhaListaDeItens = JSON.parse(tarefasDoLocalStorage);
-  //"JSON.parse" transforma os strings em objeto novamente
-  mostrarTarefas();
-}
-
-recarregarTarefas();
 button.addEventListener("click", adicionarTarefa);
 //fica esperando o evento ser acionado
