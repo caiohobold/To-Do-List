@@ -82,3 +82,10 @@ img {
 .task:hover img {
   opacity: 1;
 }
+
+.myName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
